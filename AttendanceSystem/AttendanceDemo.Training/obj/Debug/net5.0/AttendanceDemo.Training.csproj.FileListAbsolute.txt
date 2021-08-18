@@ -1,0 +1,12 @@
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\bin\Debug\net5.0\AttendanceDemo.Training.deps.json
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\bin\Debug\net5.0\AttendanceDemo.Training.dll
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\bin\Debug\net5.0\ref\AttendanceDemo.Training.dll
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\bin\Debug\net5.0\AttendanceDemo.Training.pdb
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\obj\Debug\net5.0\AttendanceDemo.Training.csproj.AssemblyReference.cache
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\obj\Debug\net5.0\AttendanceDemo.Training.GeneratedMSBuildEditorConfig.editorconfig
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\obj\Debug\net5.0\AttendanceDemo.Training.AssemblyInfoInputs.cache
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\obj\Debug\net5.0\AttendanceDemo.Training.AssemblyInfo.cs
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\obj\Debug\net5.0\AttendanceDemo.Training.csproj.CoreCompileInputs.cache
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\obj\Debug\net5.0\AttendanceDemo.Training.dll
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\obj\Debug\net5.0\ref\AttendanceDemo.Training.dll
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\AttendanceSystem\AttendanceDemo.Training\obj\Debug\net5.0\AttendanceDemo.Training.pdb
