@@ -1506,6 +1506,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "AttendanceDemo.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
+        },
+        "compile": {
+          "bin/placeholder/AttendanceDemo.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AttendanceDemo.Data.dll": {}
+        }
       }
     }
   },
@@ -5754,10 +5768,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "AttendanceDemo.Data/1.0.0": {
+      "type": "project",
+      "path": "../AttendanceDemo.Data/AttendanceDemo.Data.csproj",
+      "msbuildProject": "../AttendanceDemo.Data/AttendanceDemo.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AttendanceDemo.Data >= 1.0.0",
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.5"
     ]
@@ -5788,7 +5808,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\All C# File\\Dev Skill All Course\\Asp.NetCoreMvc-AllFile-B5\\SourceCode\\DevSkill_Project\\FullProjectSetup_UsingDesignPattern\\AttendanceSystem\\AttendanceDemo.Data\\AttendanceDemo.Data.csproj": {
+              "projectPath": "G:\\All C# File\\Dev Skill All Course\\Asp.NetCoreMvc-AllFile-B5\\SourceCode\\DevSkill_Project\\FullProjectSetup_UsingDesignPattern\\AttendanceSystem\\AttendanceDemo.Data\\AttendanceDemo.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
