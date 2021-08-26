@@ -1,5 +1,6 @@
 ﻿using AttendanceDemo.Training.BusinessObjects;
 using AttendanceDemo.Training.Contexts;
+using AttendanceDemo.Training.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,15 @@ namespace AttendanceDemo.Training.Services
 {
     public class StudentService : IStudentService
     {
-        private readonly TrainingDbContext _trainingDbContext;
+        private readonly ITrainingUnitOfWork _trainingUnitOfWork;
 
-        public StudentService(TrainingDbContext trainingDbContext)
+        public StudentService(ITrainingUnitOfWork trainingUnitOfWork)
         {
-            _trainingDbContext = trainingDbContext;
+            _trainingUnitOfWork = trainingUnitOfWork;
         }
         public IList<Student> GetAllStudents()
         {
-            var studentEntities = _trainingDbContext.Students.ToList();
+            var studentEntities = _trainingUnitOfWork.Students.GetAll();
             var students = new List<Student>();
 
             foreach(var entity in studentEntities)
@@ -37,7 +38,7 @@ namespace AttendanceDemo.Training.Services
 
         public void CreateStudent(Student student)
         {
-            _trainingDbContext.Students.Add(
+            _trainingUnitOfWork.Students.Add(
                 new Entities.Student
                 {
                     Name = student.Name,
@@ -46,7 +47,7 @@ namespace AttendanceDemo.Training.Services
              );
 
             //unit of work + repository
-            _trainingDbContext.SaveChanges();
+            _trainingUnitOfWork.Save();
         }
     }
 }

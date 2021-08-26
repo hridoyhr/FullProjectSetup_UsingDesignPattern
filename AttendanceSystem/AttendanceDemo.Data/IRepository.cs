@@ -13,5 +13,7 @@ namespace AttendanceDemo.Data
         void Remove(T item);
 
         void Update(T item);
+
+        IList<T> GetAll();
     }
 }
