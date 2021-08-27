@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace AttendanceDemo.Data
 {
-    public class Repository<T> : IRepository<T>
+    public class Repository<T> : IRepository<T> where T : class
     {
         protected readonly DbContext _dbcontext;
-
+         
         public Repository(DbContext context)
         {
             _dbcontext = context;
         }
         public void Add(T item)
         {
-            throw new NotImplementedException();
-        }
+            _dbcontext.Set<T>().Add(item);
+        }  
 
         public IList<T> GetAll()
         {
@@ -27,7 +27,7 @@ namespace AttendanceDemo.Data
 
         public void Remove(T item)
         {
-            throw new NotImplementedException();
+            _dbcontext.Set<T>().Remove(item);
         }
 
         public void Update(T item)
