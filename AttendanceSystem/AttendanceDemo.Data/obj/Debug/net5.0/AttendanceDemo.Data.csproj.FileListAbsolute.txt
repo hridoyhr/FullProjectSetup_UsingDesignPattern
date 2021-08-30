@@ -14,7 +14,6 @@ G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkil
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\bin\Debug\net5.0\AttendanceDemo.Data.dll
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\bin\Debug\net5.0\ref\AttendanceDemo.Data.dll
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\bin\Debug\net5.0\AttendanceDemo.Data.pdb
-G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\obj\Debug\net5.0\AttendanceDemo.Data.csproj.AssemblyReference.cache
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\obj\Debug\net5.0\AttendanceDemo.Data.GeneratedMSBuildEditorConfig.editorconfig
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\obj\Debug\net5.0\AttendanceDemo.Data.AssemblyInfoInputs.cache
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\obj\Debug\net5.0\AttendanceDemo.Data.AssemblyInfo.cs
@@ -22,3 +21,4 @@ G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkil
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\obj\Debug\net5.0\AttendanceDemo.Data.dll
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\obj\Debug\net5.0\ref\AttendanceDemo.Data.dll
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\obj\Debug\net5.0\AttendanceDemo.Data.pdb
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\obj\Debug\net5.0\AttendanceDemo.Data.csproj.AssemblyReference.cache

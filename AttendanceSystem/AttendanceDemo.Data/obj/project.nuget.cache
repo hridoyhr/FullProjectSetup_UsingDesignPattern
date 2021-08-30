@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SVoz520SyR8LJmL2rtyUYEkOXAfsIyrJGcaozMzvlIFVSD4XCveAeg+Z1emuaU616ss5DqVkBRPLyVKOoFL+XQ==",
+  "dgSpecHash": "eXoRBdeisUuaI96UPq8eWwfCe/VU6yZ46qw1C+8CMZ2yndN0m7dtjfWaKEdZ+IWgsL14croAD0Q1H1JDlLPHpQ==",
   "success": true,
   "projectFilePath": "G:\\All C# File\\Dev Skill All Course\\Asp.NetCoreMvc-AllFile-B5\\SourceCode\\DevSkill_Project\\FullProjectSetup_UsingDesignPattern\\AttendanceSystem\\AttendanceDemo.Data\\AttendanceDemo.Data.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Users\\Hridoy\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Hridoy\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Hridoy\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Hridoy\\.nuget\\packages\\system.linq.dynamic.core\\1.2.12\\system.linq.dynamic.core.1.2.12.nupkg.sha512",
     "C:\\Users\\Hridoy\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Hridoy\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\Hridoy\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",

@@ -15,7 +15,7 @@ namespace AttendanceSystem
             builder.RegisterType<SimpleDatabaseServices>().As<IDatabaseService>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<StudentListModel>().AsSelf();
+            builder.RegisterType<CourseListModel>().AsSelf();
 
             base.Load(builder);
         }

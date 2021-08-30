@@ -1,5 +1,4 @@
 ﻿using AttendanceDemo.Data;
-using AttendanceDemo.Training.Contexts;
 using AttendanceDemo.Training.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace AttendanceDemo.Training.Repositories
 {
-    public class AttendanceRepository : Repository<Attendance>
+    public class CourseRepository : Repository<Course, int>, 
+        ICourseRepository
     {
-        public AttendanceRepository(TrainingDbContext context)
-            : base(context)
+        public CourseRepository(ITrainingDbContext context)
+            : base((DbContext)context)
         {
-
         }
     }
 }

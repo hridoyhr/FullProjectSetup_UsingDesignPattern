@@ -1,4 +1,4 @@
-﻿@model StudentListModel;
+﻿@model CourseListModel;
 @{
     ViewData["Title"] = "Index";
 }
@@ -6,9 +6,11 @@
 <h1>Index</h1>
 
 @{ 
-    foreach(var student in Model.Students)
+    foreach(var course in Model.Students)
     {
-        <h1>@student.Name</h1><h2>@student.StudentRollNumber</h2><br/>
+        <h1>@course.Title</h1>
+        <h2>@course.Fees</h2>
+        <h2>@course.StartDate</h2><br/>
     }
 }
 

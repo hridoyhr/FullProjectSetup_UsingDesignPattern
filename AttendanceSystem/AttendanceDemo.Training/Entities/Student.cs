@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstDemo.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace AttendanceDemo.Training.Entities
 {
-    public class Student
+    public class Student : IEntity<int>
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public int StudentRollNumber { get; set; }
+        public DateTime DateOfBirth { get; set; }
+
+        public List<CourseStudents> EnrolledCourse { get; set; }
     }
 }

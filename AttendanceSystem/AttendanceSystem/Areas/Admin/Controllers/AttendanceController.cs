@@ -12,7 +12,7 @@ namespace AttendanceSystem.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            var model = new StudentListModel();
+            var model = new CourseListModel();
             model.LoadModelData();
             return View(model);
         }

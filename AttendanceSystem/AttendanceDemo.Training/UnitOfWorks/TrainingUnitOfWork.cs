@@ -14,14 +14,18 @@ namespace AttendanceDemo.Training.UnitOfWorks
 {
     public class TrainingUnitOfWork : UnitOfWork, ITrainingUnitOfWork
     {
-        public IRepository<Attendance> Attendances { get; private set; }
+        public ICourseRepository Courses { get; private set; }
 
-        public IRepository<Student> Students { get; private set; }
+        public IStudentRepository Students { get; private set; }
 
-        public TrainingUnitOfWork(TrainingDbContext context) : base(context)
+        public TrainingUnitOfWork(ITrainingDbContext context,
+            ICourseRepository courses,
+            IStudentRepository students
+            ) : base((DbContext)context)
         {
-            Attendances = new AttendanceRepository(context);
-            Students = new StudentRepository(context);
+            Courses = courses;
+            Students = students;
         }
     }
 }
+ 

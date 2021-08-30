@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace AttendanceSystem.Areas.Admin.Models
 {
-    public class StudentListModel
+    public class CourseListModel
     {
         private IStudentService _studentService;
 
-        public IList<Student> Students { get; set; }
+        public IList<Course> Students { get; set; }
 
-        public StudentListModel()
+        public CourseListModel()
         {
             _studentService = Startup.AutofacContainer.Resolve<IStudentService>();
         }
 
-        public StudentListModel(IStudentService studentService)
+        public CourseListModel(IStudentService studentService)
         {
             _studentService = studentService;
         }

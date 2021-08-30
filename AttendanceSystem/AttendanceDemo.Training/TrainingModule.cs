@@ -1,5 +1,7 @@
 ﻿using AttendanceDemo.Training.Contexts;
+using AttendanceDemo.Training.Repositories;
 using AttendanceDemo.Training.Services;
+using AttendanceDemo.Training.UnitOfWorks;
 using Autofac;
 using System;
 using System.Collections.Generic;
@@ -27,7 +29,19 @@ namespace AttendanceDemo.Training
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<StudentService>().As<IStudentService>()   
+            builder.RegisterType<TrainingDbContext>().As<ITrainingDbContext>()
+                .WithParameter("connectionString", _connectionString)
+                .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<StudentRepository>().As<IStudentRepository>()   
+                .InstancePerLifetimeScope();
+            builder.RegisterType<CourseRepository>().As<ICourseRepository>()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<TrainingUnitOfWork>().As<ITrainingUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<CourseService>().As<IStudentService>()
                 .InstancePerLifetimeScope();
 
             base.Load(builder);
