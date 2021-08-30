@@ -1,8 +1,9 @@
-﻿using System;
+﻿using FirstDemo.Data;
+using System;
 
 namespace AttendanceDemo.Training.Entities
 {
-    public class Attendance
+    public class Attendance : IEntity<int>
     {
         public int Id { get; set; }
 

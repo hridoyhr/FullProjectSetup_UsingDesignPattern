@@ -1,11 +1,13 @@
 ﻿using AttendanceDemo.Data;
+using AttendanceDemo.Training.Contexts;
 using AttendanceDemo.Training.Entities;
+using AttendanceDemo.Training.Repositories;
 
 namespace AttendanceDemo.Training.UnitOfWorks
 {
     public interface ITrainingUnitOfWork : IUnitOfWork
     {
-        IRepository<Attendance> Attendances { get; }
-        IRepository<Student> Students { get; }
+        IAttendanceRepository Attendances { get; }
+        IStudentRepository Students { get; }
     }
 }

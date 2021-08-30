@@ -1,5 +1,5 @@
-﻿using AttendanceDemo.Training.BusinessObjects;
-using AttendanceDemo.Training.Contexts;
+﻿using AttendanceDemo.Training.Contexts;
+using AttendanceDemo.Training.Entities;
 using AttendanceDemo.Training.UnitOfWorks;
 using System;
 using System.Collections.Generic;
@@ -17,14 +17,14 @@ namespace AttendanceDemo.Training.Services
         {
             _trainingUnitOfWork = trainingUnitOfWork;
         }
-        public IList<Student> GetAllStudents()
+        public IList<BusinessObjects.Student> GetAllStudents()
         {
             var studentEntities = _trainingUnitOfWork.Students.GetAll();
-            var students = new List<Student>();
+            var students = new List<BusinessObjects.Student>();
 
             foreach(var entity in studentEntities)
             {
-                var student = new Student()
+                var student = new BusinessObjects.Student()
                 {
                     Name = entity.Name,
                     StudentRollNumber = entity.StudentRollNumber
@@ -41,10 +41,18 @@ namespace AttendanceDemo.Training.Services
             _trainingUnitOfWork.Students.Add(
                 new Entities.Student
                 {
+                    Id = student.Id,
                     Name = student.Name,
                     StudentRollNumber = student.StudentRollNumber
                 }
              );
+
+            _trainingUnitOfWork.Attendances.Add(
+                new Entities.Attendance
+                {
+
+                }
+              );
 
             //unit of work + repository
             _trainingUnitOfWork.Save();
