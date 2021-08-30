@@ -12,11 +12,12 @@ namespace AttendanceDemo.Training.UnitOfWorks
 {
     public class AdoNetTrainingUnitOfWork : ITrainingUnitOfWork
     {
-        public IRepository<Attendance, int> Attendances => throw new NotImplementedException();
+        public IRepository<Course, int> Course => throw new NotImplementedException();
 
-        public IRepository<Student, int> Students => throw new NotImplementedException();
+        public IRepository<Student, int> Student => throw new NotImplementedException();
 
-        IAttendanceRepository ITrainingUnitOfWork.Attendances => throw new NotImplementedException();
+
+        ICourseRepository ITrainingUnitOfWork.Courses => throw new NotImplementedException();
 
         IStudentRepository ITrainingUnitOfWork.Students => throw new NotImplementedException();
 

@@ -7,7 +7,7 @@ namespace AttendanceDemo.Training.UnitOfWorks
 {
     public interface ITrainingUnitOfWork : IUnitOfWork
     {
-        IAttendanceRepository Attendances { get; }
+        ICourseRepository Courses { get; }
         IStudentRepository Students { get; }
     }
 }

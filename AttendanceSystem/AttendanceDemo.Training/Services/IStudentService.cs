@@ -9,6 +9,6 @@ namespace AttendanceDemo.Training.Services
 {
     public interface IStudentService
     {
-        IList<Student> GetAllStudents();
+        IList<Course> GetAllStudents();
     }
 }

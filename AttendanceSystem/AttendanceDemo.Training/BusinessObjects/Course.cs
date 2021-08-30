@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace AttendanceDemo.Training.BusinessObjects
 {
-    public class Student
+    public class Course
     {
-        public string Name { get; set; }
+        public string Title { get; set; }
 
-        public int StudentRollNumber { get; set; }
+        public int Fees { get; set; }
+
+        public DateTime StartDate { get; set; }
     }
 }

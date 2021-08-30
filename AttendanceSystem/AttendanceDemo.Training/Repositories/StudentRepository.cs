@@ -10,13 +10,14 @@ using System.Threading.Tasks;
 
 namespace AttendanceDemo.Training.Repositories
 {
-    public class StudentRepository : Repository<Student, int> , IStudentRepository
+    public class StudentRepository : Repository<Student, int>, 
+        IStudentRepository
     {
-        public StudentRepository(ITrainingDbContext context)
-            : base((DbContext)context)
+
+        public StudentRepository(TrainingDbContext context)
+            : base(context)
         {
 
         }
     }
 }
- 

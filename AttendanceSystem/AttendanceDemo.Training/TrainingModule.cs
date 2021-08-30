@@ -36,12 +36,12 @@ namespace AttendanceDemo.Training
 
             builder.RegisterType<StudentRepository>().As<IStudentRepository>()   
                 .InstancePerLifetimeScope();
-            builder.RegisterType<AttendanceRepository>().As<IAttendanceRepository>()
+            builder.RegisterType<CourseRepository>().As<ICourseRepository>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<TrainingUnitOfWork>().As<ITrainingUnitOfWork>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<StudentService>().As<IStudentService>()
+            builder.RegisterType<CourseService>().As<IStudentService>()
                 .InstancePerLifetimeScope();
 
             base.Load(builder);

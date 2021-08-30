@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 
 namespace AttendanceDemo.Training.Entities
 {
-    public class Student : IEntity<int>
+    public class Topic 
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public string Description { get; set; }
 
-        public List<CourseStudents> EnrolledCourse { get; set; }
+        public int CourseId { get; set; }
+
+        public Course Course { get; set; }
     }
 }

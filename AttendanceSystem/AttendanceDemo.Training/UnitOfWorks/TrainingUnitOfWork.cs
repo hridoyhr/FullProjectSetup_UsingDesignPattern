@@ -14,16 +14,16 @@ namespace AttendanceDemo.Training.UnitOfWorks
 {
     public class TrainingUnitOfWork : UnitOfWork, ITrainingUnitOfWork
     {
-        public IAttendanceRepository Attendances { get; private set; }
+        public ICourseRepository Courses { get; private set; }
 
         public IStudentRepository Students { get; private set; }
 
         public TrainingUnitOfWork(ITrainingDbContext context,
-            IAttendanceRepository attendances,
+            ICourseRepository courses,
             IStudentRepository students
             ) : base((DbContext)context)
         {
-            Attendances = attendances;
+            Courses = courses;
             Students = students;
         }
     }

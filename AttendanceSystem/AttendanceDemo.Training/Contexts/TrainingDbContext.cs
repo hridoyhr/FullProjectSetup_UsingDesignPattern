@@ -31,8 +31,12 @@ namespace AttendanceDemo.Training.Contexts
             base.OnConfiguring(dbContextOptionsBuilder);
         }
 
+        public DbSet<Course> Courses { get; set; }
+
         public DbSet<Student> Students { get; set; }
 
-        public DbSet<Attendance> Attendances { get; set; }
+        public DbSet<Topic> Topics { get; set; }
+
+        public DbSet<CourseStudents> CourseStudents { get; set; }
     }
 }
