@@ -10,23 +10,23 @@ namespace AttendanceSystem.Areas.Admin.Models
 {
     public class CourseListModel
     {
-        private ICourseService _studentService;
+        private ICourseService _courseService;
 
-        public IList<Course> Students { get; set; }
+        public IList<Course> Courses { get; set; }
 
         public CourseListModel()
         {
-            _studentService = Startup.AutofacContainer.Resolve<ICourseService>();
+            _courseService = Startup.AutofacContainer.Resolve<ICourseService>();
         }
 
-        public CourseListModel(ICourseService studentService)
+        public CourseListModel(ICourseService courseService)
         {
-            _studentService = studentService;
+            _courseService = courseService;
         }
 
         public void LoadModelData()
         {
-            Students = _studentService.GetAllStudents();
+            Courses = _courseService.GetAllCourses();
         }
     }
 }

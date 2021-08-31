@@ -1,4 +1,5 @@
-﻿using AttendanceDemo.Training.Contexts;
+﻿using AttendanceDemo.Training;
+using AttendanceDemo.Training.Contexts;
 using AttendanceDemo.Training.Repositories;
 using AttendanceDemo.Training.Services;
 using AttendanceDemo.Training.UnitOfWorks;
@@ -9,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AttendanceDemo.Training
+namespace AttendanceDemo.Common
 {
     public class TrainingModule : Module
     {

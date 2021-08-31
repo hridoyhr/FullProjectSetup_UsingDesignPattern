@@ -5,12 +5,12 @@
 
 <h1>Index</h1>
 
-@{ 
-    foreach(var course in Model.Students)
+@{
+    foreach (var course in Model.Courses)
     {
         <h1>@course.Title</h1>
-        <h2>@course.Fees</h2>
-        <h2>@course.StartDate</h2><br/>
+        <h1>@course.Fees</h1>
+        <br />
     }
 }
 

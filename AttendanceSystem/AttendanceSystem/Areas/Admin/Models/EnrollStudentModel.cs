@@ -6,14 +6,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Student = AttendanceDemo.Training.BusinessObjects.Student;
 
 namespace AttendanceSystem.Areas.Admin.Models
 {
     public class EnrollStudentModel
     {
-        public int StudentID { get; set; }
+        public int studentID { get; set; }
         
-        public string CourseName { get; set; }
+        public string courseName { get; set; }
 
         private readonly ICourseService _courseService;
 
@@ -31,13 +32,13 @@ namespace AttendanceSystem.Areas.Admin.Models
         {
             var courses = _courseService.GetAllCourses();
 
-            var selectedCourse = courses.Where(x => x.Title == CourseName).FirstOrDefault();
+            var selectedCourse = courses.Where(x => x.Title == courseName).FirstOrDefault();
 
-            var student = new AttendanceDemo.Training.BusinessObjects.Student
+            var student = new Student
             {
-                Id = StudentID,
+                Id = studentID,
                 Name = "Hridoy",
-                DateOfBirth = DateTime.Now
+                DateOfBirth = DateTime.Now,
             };
             _courseService.EnrollStudent(selectedCourse, student);
         }
