@@ -2441,6 +2441,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AttendanceDemo.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0"
+        },
+        "compile": {
+          "bin/placeholder/AttendanceDemo.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AttendanceDemo.Common.dll": {}
+        }
+      },
       "AttendanceDemo.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2460,6 +2473,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AttendanceDemo.Common": "1.0.0",
           "AttendanceDemo.Data": "1.0.0",
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
@@ -8244,6 +8258,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "AttendanceDemo.Common/1.0.0": {
+      "type": "project",
+      "path": "../AttendanceDemo.Common/AttendanceDemo.Common.csproj",
+      "msbuildProject": "../AttendanceDemo.Common/AttendanceDemo.Common.csproj"
+    },
     "AttendanceDemo.Data/1.0.0": {
       "type": "project",
       "path": "../AttendanceDemo.Data/AttendanceDemo.Data.csproj",
@@ -8257,6 +8276,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AttendanceDemo.Common >= 1.0.0",
       "AttendanceDemo.Data >= 1.0.0",
       "AttendanceDemo.Training >= 1.0.0",
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
@@ -8298,6 +8318,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "G:\\All C# File\\Dev Skill All Course\\Asp.NetCoreMvc-AllFile-B5\\SourceCode\\DevSkill_Project\\FullProjectSetup_UsingDesignPattern\\AttendanceSystem\\AttendanceDemo.Common\\AttendanceDemo.Common.csproj": {
+              "projectPath": "G:\\All C# File\\Dev Skill All Course\\Asp.NetCoreMvc-AllFile-B5\\SourceCode\\DevSkill_Project\\FullProjectSetup_UsingDesignPattern\\AttendanceSystem\\AttendanceDemo.Common\\AttendanceDemo.Common.csproj"
+            },
             "G:\\All C# File\\Dev Skill All Course\\Asp.NetCoreMvc-AllFile-B5\\SourceCode\\DevSkill_Project\\FullProjectSetup_UsingDesignPattern\\AttendanceSystem\\AttendanceDemo.Data\\AttendanceDemo.Data.csproj": {
               "projectPath": "G:\\All C# File\\Dev Skill All Course\\Asp.NetCoreMvc-AllFile-B5\\SourceCode\\DevSkill_Project\\FullProjectSetup_UsingDesignPattern\\AttendanceSystem\\AttendanceDemo.Data\\AttendanceDemo.Data.csproj"
             },

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "kc8CIFZBTVPC2b2QCmEuTQJRtspWkPBrQwXQs/Cu53lFlGXDRS2HPLVlcZxtkGjBntC47VfW7QWTj7mSPMRyDg==",
+  "success": true,
+  "projectFilePath": "G:\\All C# File\\Dev Skill All Course\\Asp.NetCoreMvc-AllFile-B5\\SourceCode\\DevSkill_Project\\FullProjectSetup_UsingDesignPattern\\AttendanceSystem\\AttendanceDemo.Common\\AttendanceDemo.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hridoy\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
+    "C:\\Users\\Hridoy\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
+    "C:\\Users\\Hridoy\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Hridoy\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -15,6 +15,6 @@ namespace AttendanceDemo.Training.Entities
 
         public DateTime DateOfBirth { get; set; }
 
-        public List<CourseStudents> EnrolledCourse { get; set; }
+        public List<CourseStudents> EnrolledCourses { get; set; }
     }
 }

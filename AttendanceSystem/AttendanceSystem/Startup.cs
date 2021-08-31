@@ -1,4 +1,4 @@
-
+using AttendanceDemo.Common;
 using AttendanceDemo.Training;
 using AttendanceDemo.Training.Contexts;
 using AttendanceSystem.Data;
@@ -47,7 +47,12 @@ namespace AttendanceSystem
         {
             var connectionInfo = GetConnectionStringAndAssemblyName();
 
-            builder.RegisterModule(new TrainingModule(connectionInfo.connectionString, connectionInfo.migrationAssemblyName));
+
+            builder.RegisterModule(new TrainingModule(connectionInfo.connectionString,
+                connectionInfo.migrationAssemblyName));
+
+            builder.RegisterModule(new CommonModule());
+
             builder.RegisterModule(new WebModule());
         }
 

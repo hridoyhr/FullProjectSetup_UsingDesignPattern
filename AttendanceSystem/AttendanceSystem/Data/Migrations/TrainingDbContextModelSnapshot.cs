@@ -43,19 +43,12 @@ namespace AttendanceSystem.Data.Migrations
             modelBuilder.Entity("AttendanceDemo.Training.Entities.CourseStudents", b =>
                 {
                     b.Property<int>("CourseId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CourseId1")
                         .HasColumnType("int");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
-                    b.HasKey("CourseId");
-
-                    b.HasIndex("CourseId1");
+                    b.HasKey("CourseId", "StudentId");
 
                     b.HasIndex("StudentId");
 
@@ -106,13 +99,13 @@ namespace AttendanceSystem.Data.Migrations
             modelBuilder.Entity("AttendanceDemo.Training.Entities.CourseStudents", b =>
                 {
                     b.HasOne("AttendanceDemo.Training.Entities.Course", "Course")
-                        .WithMany()
-                        .HasForeignKey("CourseId1")
+                        .WithMany("EnrolledStudents")
+                        .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("AttendanceDemo.Training.Entities.Student", "Student")
-                        .WithMany("EnrolledCourse")
+                        .WithMany("EnrolledCourses")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -135,12 +128,14 @@ namespace AttendanceSystem.Data.Migrations
 
             modelBuilder.Entity("AttendanceDemo.Training.Entities.Course", b =>
                 {
+                    b.Navigation("EnrolledStudents");
+
                     b.Navigation("Topics");
                 });
 
             modelBuilder.Entity("AttendanceDemo.Training.Entities.Student", b =>
                 {
-                    b.Navigation("EnrolledCourse");
+                    b.Navigation("EnrolledCourses");
                 });
 #pragma warning restore 612, 618
         }
