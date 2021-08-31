@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace AttendanceDemo.Training.Services
 {
-    public interface IStudentService
+    public interface ICourseService
     {
-        IList<Course> GetAllStudents();
+        IList<Course> GetAllCourses();
+
+        void EnrollStudent(Course course, Student student);
     }
 }

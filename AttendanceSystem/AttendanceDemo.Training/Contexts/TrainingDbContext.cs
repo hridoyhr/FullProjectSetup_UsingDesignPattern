@@ -31,12 +31,34 @@ namespace AttendanceDemo.Training.Contexts
             base.OnConfiguring(dbContextOptionsBuilder);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //one to many relationship
+            modelBuilder.Entity<Course>()
+                .HasMany(c => c.Topics)
+                .WithOne(t => t.Course)
+                .HasForeignKey(t => t.CourseId);
+
+            modelBuilder.Entity<CourseStudents>()
+                .HasKey(cs => new { cs.CourseId, cs.StudentId });
+
+            modelBuilder.Entity<CourseStudents>()
+                .HasOne(cs => cs.Course)
+                .WithMany(c => c.EnrolledStudents)
+                .HasForeignKey(cs => cs.CourseId);
+
+            modelBuilder.Entity<CourseStudents>()
+                .HasOne(cs => cs.Student)
+                .WithMany(s => s.EnrolledCourses)
+                .HasForeignKey(cs => cs.StudentId);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
         public DbSet<Course> Courses { get; set; }
 
         public DbSet<Student> Students { get; set; }
 
         public DbSet<Topic> Topics { get; set; }
-
-        public DbSet<CourseStudents> CourseStudents { get; set; }
     }
 }

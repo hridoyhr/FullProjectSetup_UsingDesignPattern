@@ -4,14 +4,16 @@ using AttendanceDemo.Training.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AttendanceSystem.Data.Migrations
 {
     [DbContext(typeof(TrainingDbContext))]
-    partial class TrainingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210830173315_ModifyStudentAndCourse")]
+    partial class ModifyStudentAndCourse
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,21 +40,6 @@ namespace AttendanceSystem.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
-                });
-
-            modelBuilder.Entity("AttendanceDemo.Training.Entities.CourseStudents", b =>
-                {
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CourseId", "StudentId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("CourseStudents");
                 });
 
             modelBuilder.Entity("AttendanceDemo.Training.Entities.Student", b =>
@@ -96,25 +83,6 @@ namespace AttendanceSystem.Data.Migrations
                     b.ToTable("Topics");
                 });
 
-            modelBuilder.Entity("AttendanceDemo.Training.Entities.CourseStudents", b =>
-                {
-                    b.HasOne("AttendanceDemo.Training.Entities.Course", "Course")
-                        .WithMany("EnrolledStudents")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AttendanceDemo.Training.Entities.Student", "Student")
-                        .WithMany("EnrolledCourses")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Student");
-                });
-
             modelBuilder.Entity("AttendanceDemo.Training.Entities.Topic", b =>
                 {
                     b.HasOne("AttendanceDemo.Training.Entities.Course", "Course")
@@ -128,14 +96,7 @@ namespace AttendanceSystem.Data.Migrations
 
             modelBuilder.Entity("AttendanceDemo.Training.Entities.Course", b =>
                 {
-                    b.Navigation("EnrolledStudents");
-
                     b.Navigation("Topics");
-                });
-
-            modelBuilder.Entity("AttendanceDemo.Training.Entities.Student", b =>
-                {
-                    b.Navigation("EnrolledCourses");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,7 +9,6 @@ namespace AttendanceDemo.Training.Entities
 {
     public class CourseStudents
     {
-        [Key]
         public int CourseId { get; set; }
 
         public Course Course { get; set; }

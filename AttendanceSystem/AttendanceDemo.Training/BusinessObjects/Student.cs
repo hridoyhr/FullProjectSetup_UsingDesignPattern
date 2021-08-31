@@ -1,20 +1,17 @@
-﻿using FirstDemo.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AttendanceDemo.Training.Entities
+namespace AttendanceDemo.Training.BusinessObjects
 {
-    public class Student : IEntity<int>
+    public class Student
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
         public DateTime DateOfBirth { get; set; }
-
-        public List<CourseStudents> EnrolledCourses { get; set; }
     }
 }

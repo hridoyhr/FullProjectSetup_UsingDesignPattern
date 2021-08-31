@@ -15,5 +15,7 @@ namespace AttendanceDemo.Training.Entities
         public DateTime StartDate { get; set; }
 
         public List<Topic> Topics { get; set; }
+
+        public List<CourseStudents> EnrolledStudents { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AttendanceDemo.Training.Services
 {
-    public class CourseService : IStudentService
+    public class CourseService : ICourseService
     {
         private readonly ITrainingUnitOfWork _trainingUnitOfWork;
 
@@ -17,7 +17,7 @@ namespace AttendanceDemo.Training.Services
         {
             _trainingUnitOfWork = trainingUnitOfWork;
         }
-        public IList<BusinessObjects.Course> GetAllStudents()
+        public IList<BusinessObjects.Course> GetAllCourses()
         {
             var courseEntites = _trainingUnitOfWork.Courses.GetAll();
             var courses = new List<BusinessObjects.Course>();
@@ -49,14 +49,29 @@ namespace AttendanceDemo.Training.Services
                 }
              );
 
-            _trainingUnitOfWork.Courses.Add(
-                new Entities.Course
-                {
-
-                }
-              );
-
             //unit of work + repository
+            _trainingUnitOfWork.Save();
+        } 
+
+        public void EnrolledStudent(Course course, BusinessObjects.Student student)
+        {
+            var courseEntity = _trainingUnitOfWork.Courses.GetById(course.Id);
+
+            if (courseEntity == null)
+                throw new InvalidOperationException("Course was not found");
+
+            if (courseEntity.EnrolledStudents == null)
+                courseEntity.EnrolledStudents = new List<CourseStudents>();
+
+            courseEntity.EnrolledStudents.Add(new Entities.CourseStudents
+            {
+                Student = new Entities.Student
+                { 
+                    Name = student.Name,
+                    DateOfBirth = student.DateOfBirth
+                }
+            });
+
             _trainingUnitOfWork.Save();
         }
     }
