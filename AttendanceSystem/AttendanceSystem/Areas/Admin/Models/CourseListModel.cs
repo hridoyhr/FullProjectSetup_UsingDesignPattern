@@ -10,7 +10,7 @@ namespace AttendanceSystem.Areas.Admin.Models
 {
     public class CourseListModel
     {
-        private ICourseService _courseService;
+        private readonly ICourseService _courseService;
 
         public IList<Course> Courses { get; set; }
 
