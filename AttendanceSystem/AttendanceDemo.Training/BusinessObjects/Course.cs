@@ -9,6 +9,7 @@ namespace AttendanceDemo.Training.BusinessObjects
     public class Course
     {
         public int Id { get; set; }
+
         public string Title { get; set; }
 
         public int Fees { get; set; }

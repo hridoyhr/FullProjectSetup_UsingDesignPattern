@@ -1,0 +1,13 @@
+2021-09-06 20:15:52.435 +06:00 [INF] Application Starting up
+2021-09-06 22:18:51.212 +06:00 [INF] Application Starting up
+2021-09-06 22:18:52.916 +06:00 [ERR] Create Course Failed
+AttendanceDemo.Training.Exceptions.DuplicateTitleException: Course Title already exists
+   at AttendanceDemo.Training.Services.CourseService.CreateCourse(Course course) in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Training\Services\CourseService.cs:line 48
+   at AttendanceSystem.Areas.Admin.Models.CreateCourseModel.CreateCourse() in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceSystem\Areas\Admin\Models\CreateCourseModel.cs:line 38
+   at AttendanceSystem.Areas.Admin.Controllers.CourseController.Create(CreateCourseModel model) in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceSystem\Areas\Admin\Controllers\CourseController.cs:line 57
+2021-09-06 22:56:30.743 +06:00 [INF] Application Starting up
+2021-09-06 22:56:32.538 +06:00 [ERR] Create Course Failed
+AttendanceDemo.Training.Exceptions.DuplicateTitleException: Course Title already exists
+   at AttendanceDemo.Training.Services.CourseService.CreateCourse(Course course) in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Training\Services\CourseService.cs:line 48
+   at AttendanceSystem.Areas.Admin.Models.CreateCourseModel.CreateCourse() in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceSystem\Areas\Admin\Models\CreateCourseModel.cs:line 38
+   at AttendanceSystem.Areas.Admin.Controllers.CourseController.Create(CreateCourseModel model) in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceSystem\Areas\Admin\Controllers\CourseController.cs:line 57

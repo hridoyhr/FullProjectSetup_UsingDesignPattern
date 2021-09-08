@@ -342,3 +342,5 @@ System.NotImplementedException: The method or operation is not implemented.
    at AttendanceDemo.Training.Services.CourseService.CreateCourse(Course course) in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Training\Services\CourseService.cs:line 102
    at AttendanceSystem.Areas.Admin.Models.CreateCourseModel.CreateCourse() in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceSystem\Areas\Admin\Models\CreateCourseModel.cs:line 38
    at AttendanceSystem.Areas.Admin.Controllers.CourseController.Create(CreateCourseModel model) in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceSystem\Areas\Admin\Controllers\CourseController.cs:line 58
+2021-08-31 23:50:47.333 +06:00 [INF] Application Starting up
+2021-08-31 23:59:19.875 +06:00 [INF] Application Starting up
