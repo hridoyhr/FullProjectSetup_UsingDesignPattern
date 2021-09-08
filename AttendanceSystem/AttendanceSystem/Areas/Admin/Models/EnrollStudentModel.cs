@@ -13,7 +13,6 @@ namespace AttendanceSystem.Areas.Admin.Models
     public class EnrollStudentModel
     {
         public int studentID { get; set; }
-        
         public string courseName { get; set; }
 
         private readonly ICourseService _courseService;
