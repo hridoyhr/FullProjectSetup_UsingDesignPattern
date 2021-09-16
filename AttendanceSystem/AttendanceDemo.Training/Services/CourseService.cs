@@ -21,7 +21,7 @@ namespace AttendanceDemo.Training.Services
         }
         public IList<Course> GetAllCourses()
         {
-            var courseEntites = _trainingUnitOfWork.Courses.GetAll();
+            var courseEntites = _trainingUnitOfWork.Courses.GetAll(); 
             var courses = new List<Course>();
 
             foreach(var entity in courseEntites)
@@ -44,19 +44,20 @@ namespace AttendanceDemo.Training.Services
             if (course == null)
                 throw new InvalidParameterException("Course was not provided");
 
-            if (IsTitleArleadyUsed(course.Title))
+            if (IsTitleAlreadyUsed(course.Title))
                 throw new DuplicateTitleException("Course Title already exists");
 
             if (!IsValidStartDate(course.StartDate))
                 throw new InvalidOperationException("Start date should be atleast 30 days ahead");
 
             _trainingUnitOfWork.Courses.Add(
-                   new Entities.Course
-                   {
-                       Title = course.Title,
-                       Fees = course.Fees,
-                       StartDate = course.StartDate,
-                   }
+                new Entities.Course
+                {
+                    Title = course.Title,
+                    Fees = course.Fees,
+                    StartDate = course.StartDate,
+                }
+
                 );
             //unit of work + repository
             _trainingUnitOfWork.Save();
@@ -86,7 +87,7 @@ namespace AttendanceDemo.Training.Services
             _trainingUnitOfWork.Save();
         }
 
-        private bool IsTitleArleadyUsed(string title) =>
+        private bool IsTitleAlreadyUsed(string title) =>
             _trainingUnitOfWork.Courses.GetCount(x => x.Title == title) > 0;
 
         private bool IsValidStartDate(DateTime startDate) =>

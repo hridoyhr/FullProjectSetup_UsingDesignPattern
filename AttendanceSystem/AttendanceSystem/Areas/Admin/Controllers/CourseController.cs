@@ -21,6 +21,7 @@ namespace AttendanceSystem.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var model = new CourseListModel();
+            model.LoadModelData();
             return View(model);
         }
 
