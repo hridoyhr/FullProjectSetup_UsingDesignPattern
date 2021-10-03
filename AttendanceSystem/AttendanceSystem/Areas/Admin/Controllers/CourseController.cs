@@ -1,4 +1,5 @@
-﻿using AttendanceSystem.Areas.Admin.Models;
+﻿using AttendanceDemo.Models;
+using AttendanceSystem.Areas.Admin.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -23,6 +24,14 @@ namespace AttendanceSystem.Areas.Admin.Controllers
             var model = new CourseListModel();
             model.LoadModelData();
             return View(model);
+        }
+
+        public JsonResult GetCourseData()
+        {
+            var dataTablesModel = new DataTablesAjaxRequestModel(Request);
+            var model = new CourseListModel();
+            var data = model.GetCourses(dataTablesModel);
+            return Json(data);
         }
 
         public IActionResult Enroll()
