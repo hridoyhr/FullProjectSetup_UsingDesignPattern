@@ -1,4 +1,5 @@
-﻿using AttendanceDemo.Training.BusinessObjects;
+﻿using AttendanceDemo.Models;
+using AttendanceDemo.Training.BusinessObjects;
 using AttendanceDemo.Training.Services;
 using Autofac;
 using System;
@@ -27,6 +28,30 @@ namespace AttendanceSystem.Areas.Admin.Models
         public void LoadModelData()
         {
             Courses = _courseService.GetAllCourses();
+        }
+
+        internal object GetCourses(DataTablesAjaxRequestModel tableModel)
+        {
+            var data = _courseService.GetCourses(
+                tableModel.PageIndex,
+                tableModel.PageSize,
+                tableModel.SearchText,
+                tableModel.GetSortText(new string[] { "Title", "Fees", "StartDate"}));
+
+            return new
+            {
+                recordsTotal = data.total,
+                recordsFiltered = data.totalDisplay,
+                data = (from record in data.records
+                        select new string[]
+                        { 
+                            record.Title,
+                            record.Fees.ToString(),
+                            record.StartDate.ToString(),
+                            record.Id.ToString()
+                        }
+                     ).ToArray()
+            };
         }
     }
 }

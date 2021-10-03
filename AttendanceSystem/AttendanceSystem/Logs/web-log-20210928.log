@@ -1,0 +1,49 @@
+2021-09-28 18:25:09.869 +06:00 [INF] Application Starting up
+2021-09-28 18:28:15.354 +06:00 [INF] Application Starting up
+2021-09-28 18:30:13.963 +06:00 [INF] Application Starting up
+2021-09-28 18:30:21.550 +06:00 [INF] Application Starting up
+2021-09-28 18:31:02.579 +06:00 [INF] Application Starting up
+2021-09-28 23:21:37.598 +06:00 [INF] Application Starting up
+2021-09-28 23:24:41.281 +06:00 [INF] Application Starting up
+2021-09-28 23:26:19.931 +06:00 [INF] Application Starting up
+2021-09-28 23:26:21.588 +06:00 [INF] Application Starting up
+2021-09-28 23:26:22.914 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A second operation was started on this context before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AttendanceDemo.Data.Repository`2.GetAll() in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Data\Repository.cs:line 92
+   at AttendanceDemo.Training.Services.CourseService.GetAllCourses() in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceDemo.Training\Services\CourseService.cs:line 24
+   at AttendanceSystem.Areas.Admin.Models.CourseListModel.LoadModelData() in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceSystem\Areas\Admin\Models\CourseListModel.cs:line 29
+   at AttendanceSystem.Areas.Admin.Controllers.CourseController.Index() in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\DevSkill_Project\FullProjectSetup_UsingDesignPattern\AttendanceSystem\AttendanceSystem\Areas\Admin\Controllers\CourseController.cs:line 24
+   at lambda_method507(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-28 23:28:26.144 +06:00 [INF] Application Starting up
+2021-09-28 23:28:43.190 +06:00 [INF] Application Starting up
+2021-09-28 23:30:08.894 +06:00 [INF] Application Starting up
+2021-09-28 23:31:33.109 +06:00 [INF] Application Starting up
+2021-09-28 23:33:50.312 +06:00 [INF] Application Starting up
+2021-09-28 23:34:50.223 +06:00 [INF] Application Starting up

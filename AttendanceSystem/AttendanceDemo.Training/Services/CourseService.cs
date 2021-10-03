@@ -28,9 +28,10 @@ namespace AttendanceDemo.Training.Services
             {
                 var course = new Course()
                 {
+                    Id = entity.Id,
                     Title = entity.Title,
                     Fees = entity.Fees,
-                    StartDate = entity.StartDate,
+                    StartDate = entity.StartDate
                 };
 
                 courses.Add(course);
@@ -55,7 +56,7 @@ namespace AttendanceDemo.Training.Services
                 {
                     Title = course.Title,
                     Fees = course.Fees,
-                    StartDate = course.StartDate,
+                    StartDate = course.StartDate
                 }
 
                 );
