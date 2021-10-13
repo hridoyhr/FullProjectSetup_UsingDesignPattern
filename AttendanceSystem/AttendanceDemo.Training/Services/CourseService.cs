@@ -94,5 +94,10 @@ namespace AttendanceDemo.Training.Services
         private bool IsValidStartDate(DateTime startDate) =>
             startDate.Subtract(_dateTimeUtility.Now).TotalDays > 30;
 
+        public (IList<Course> records, int total, int totalDisplay) GetCourses(int pageIndex, int pageSize, 
+            string searchText, string sortText)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
