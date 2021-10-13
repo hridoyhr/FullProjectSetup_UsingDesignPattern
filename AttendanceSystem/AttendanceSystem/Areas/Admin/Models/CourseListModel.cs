@@ -50,7 +50,7 @@ namespace AttendanceSystem.Areas.Admin.Models
                             record.StartDate.ToString(),
                             record.Id.ToString()
                         }
-                     ).ToArray()
+                       ).ToArray()
             };
         }
     }

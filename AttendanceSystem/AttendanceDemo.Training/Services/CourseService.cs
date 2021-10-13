@@ -5,6 +5,7 @@ using AttendanceDemo.Training.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace AttendanceDemo.Training.Services
 {
@@ -97,7 +98,20 @@ namespace AttendanceDemo.Training.Services
         public (IList<Course> records, int total, int totalDisplay) GetCourses(int pageIndex, int pageSize, 
             string searchText, string sortText)
         {
-            throw new NotImplementedException();
+            //using ternary operator
+            var courseData = _trainingUnitOfWork.Courses.GetDynamic(
+                string.IsNullOrWhiteSpace(searchText) ? null : x => x.Title == searchText,
+                sortText, string.Empty, pageIndex, pageSize);
+
+            var resultData = (from course in courseData.data
+                              select new Course
+                              {
+                                  Id = course.Id,
+                                  Title = course.Title,
+                                  Fees = course.Fees,
+                                  StartDate = course.StartDate
+                              }).ToList();
+            return (resultData, courseData.total, courseData.totalDisplay);                 
         }
     }
 }
