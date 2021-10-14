@@ -100,7 +100,7 @@ namespace AttendanceDemo.Training.Services
         {
             //using ternary operator
             var courseData = _trainingUnitOfWork.Courses.GetDynamic(
-                string.IsNullOrWhiteSpace(searchText) ? null : x => x.Title == searchText,
+                string.IsNullOrWhiteSpace(searchText) ? null : x => x.Title.Contains(searchText),
                 sortText, string.Empty, pageIndex, pageSize);
 
             var resultData = (from course in courseData.data
