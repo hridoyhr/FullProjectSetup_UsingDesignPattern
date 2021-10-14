@@ -113,5 +113,24 @@ namespace AttendanceDemo.Training.Services
                               }).ToList();
             return (resultData, courseData.total, courseData.totalDisplay);                 
         }
+
+        public Course GetCourses(int id)
+        {
+            var course =  _trainingUnitOfWork.Courses.GetById(id);
+
+            if (course == null) return null;
+            return new Course
+            {
+                Id = course.Id,
+                Title = course.Title,
+                Fees = course.Fees,
+                StartDate = course.StartDate
+            };
+        }
+
+        public void UpdateCourse(Course course)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

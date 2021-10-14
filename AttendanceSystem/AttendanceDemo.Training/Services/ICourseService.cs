@@ -14,5 +14,9 @@ namespace AttendanceDemo.Training.Services
 
         (IList<Course>records, int total, int totalDisplay) GetCourses(int pageIndex, int pageSize, 
             string searchText, string sortText);
+
+        Course GetCourses(int id);
+
+        void UpdateCourse(Course course);
     }
 }

@@ -22,7 +22,6 @@ namespace AttendanceSystem.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var model = new CourseListModel();
-            model.LoadModelData();
             return View(model);
         }
 
@@ -71,6 +70,24 @@ namespace AttendanceSystem.Areas.Admin.Controllers
                     ModelState.AddModelError("", "Failed to create course");
                     _logger.LogError(ex, "Create Course Failed");
                 }
+            }
+            return View(model);
+        }
+
+        //Edit
+        public IActionResult Edit(int id)
+        {
+            var model = new EditCourseModel();
+            model.LoadModelData(id);
+            return View(model);
+        }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Edit(EditCourseModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                model.Update();
             }
             return View(model);
         }

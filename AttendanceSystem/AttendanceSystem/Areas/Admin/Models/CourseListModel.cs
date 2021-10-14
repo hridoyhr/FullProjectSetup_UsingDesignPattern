@@ -13,8 +13,6 @@ namespace AttendanceSystem.Areas.Admin.Models
     {
         private readonly ICourseService _courseService;
 
-        public IList<Course> Courses { get; set; }
-
         public CourseListModel()
         {
             _courseService = Startup.AutofacContainer.Resolve<ICourseService>();
@@ -23,11 +21,6 @@ namespace AttendanceSystem.Areas.Admin.Models
         public CourseListModel(ICourseService courseService)
         {
             _courseService = courseService;
-        }
-
-        public void LoadModelData()
-        {
-            Courses = _courseService.GetAllCourses();
         }
 
         internal object GetCourses(DataTablesAjaxRequestModel tableModel)
